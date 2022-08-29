@@ -1,3 +1,5 @@
+//Fetch for Weather with API key from open weather API
+//API Key = 098c215b3fefefbb89dabb3ae90080e8 
 let weather = 
     { apiKey: "098c215b3fefefbb89dabb3ae90080e8",
     fetchWeather: function (city) {
@@ -16,7 +18,7 @@ let weather =
         })
         .then((data) => this.displayWeather(data));
     }},
-
+    //Weather Display
     displayWeather: function (data) {
         const { name } = data;
         const { icon, description } = data.weather[0];
@@ -32,6 +34,30 @@ let weather =
             "Humidity: " + humidity + "%";
         document.querySelector(".wind").innerText =
         "Wind speed: " + speed + " km/h";
-   
+        //Remove Loading Icon when location isn't entered yet
+        document.querySelector(".weather").classList.remove("loading");
+        document.body.style.backgroundImage =
+      "url('https://source.unsplash.com/1600x900/?" + name + "')";
+  },
 
+  function () {
+    this.fetchWeather(document.querySelector(".search-bar").value);
+    },
+search: function () {
+  this.fetchWeather(document.querySelector(".search-bar").value);
+    },
+    };
 
+    document.querySelector(".search button").addEventListener("click", function () {
+    weather.search();
+    });
+
+    document
+    .querySelector(".search-bar")
+    .addEventListener("keyup", function (event) {
+  if (event.key == "Enter") {
+    weather.search();
+  }
+    });
+
+    weather.fetchWeather("Denver");
