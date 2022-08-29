@@ -1,3 +1,5 @@
+Author
+Benjamin Shutyak
 Welcome to my Weather App!
 
 I can't wait to be part of your day! Whether you need to decide on an outfit, cancel plans, or check the humidity, my weather app is here to help! Enjoy it and please reach out to me if you find any bugs or issues. Thank you!
@@ -18,6 +20,6 @@ Please click the "Contact Me" button at the bottom and fill out a brief form. I 
 
 
 
-Author
 
-Benjamin Shutyak
+Thank you to all the sources that helped me learn and appreciate code better. 
+Thank You Flatiron School, Youtube, and Jonah Lawrence for your helpful tutorials
